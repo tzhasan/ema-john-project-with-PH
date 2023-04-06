@@ -1,6 +1,7 @@
 import React from 'react';
 import './Cart.css'
 const Cart = ({ cart }) => {
+  console.log(cart);
   let totalPrice = 0
   let totalShipping = 0
   let quantity= 0
@@ -8,6 +9,7 @@ const Cart = ({ cart }) => {
     totalPrice = totalPrice + product.price * product.quantity
     totalShipping = totalShipping + product.shipping
     quantity= quantity + product.quantity
+    console.log(quantity);
   }
   const tax = totalPrice * 7 / 100
   const grandTotal = totalPrice + totalShipping+ tax
